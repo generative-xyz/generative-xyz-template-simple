@@ -16,7 +16,16 @@
     <!-- tonejs@14.8.49
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
     -->
-
+    <script src="https://cdn.jsdelivr.net/npm/keccak256@latest/keccak256.js"></script>
+    <script type="text/javascript">
+        // not editable
+        const tokenIdRand = (Math.floor(Math.random() * 1000000) + 1) * 1000000 + (Math.floor(Math.random() * 100) + 1);
+        let tokenData = {
+            "tokenId": tokenIdRand,
+            "seed": '0x' + keccak256(tokenIdRand.toString()).toString('hex')
+        };
+        // don't edit
+    </script>
     <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
