@@ -27,13 +27,12 @@
     <!-- tonejs@14.8.49
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
     -->
-    <script id="keccak256-lib" src="https://cdn.jsdelivr.net/npm/keccak256@latest/keccak256.js"></script>
     <script id="snippet-code" type="text/javascript">
         // not editable
         const tokenIdRand = (Math.floor(Math.random() * 1000000) + 1) * 1000000 + (Math.floor(Math.random() * 100) + 1);
         let tokenData = {
             "tokenId": tokenIdRand,
-            "seed": keccak256(tokenIdRand.toString()).toString('hex')
+            "seed": tokenIdRand.toString(),
         };
         const urlSeed = new URLSearchParams(window.location.search).get('seed');
         if (urlSeed && urlSeed.length > 0) {
