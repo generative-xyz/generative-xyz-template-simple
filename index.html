@@ -36,7 +36,7 @@
             "seed": keccak256(tokenIdRand.toString()).toString('hex')
         };
         const urlSeed = new URLSearchParams(window.location.search).get('seed');
-        if (urlSeed.length > 0) {
+        if (urlSeed && urlSeed.length > 0) {
             tokenData.seed = urlSeed;
         }
         // don't edit
