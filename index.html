@@ -34,14 +34,14 @@
             "tokenId": tokenIdRand,
             "seed": tokenIdRand.toString(),
         };
-        const urlSeed = new URLSearchParams(window.location.search).get('seed');
-        if (urlSeed && urlSeed.length > 0) {
-            tokenData.seed = urlSeed;
-        }
         // don't edit
     </script>
     <script type="text/javascript">
         // not editable
+        const urlSeed = new URLSearchParams(window.location.search).get('seed');
+        if (urlSeed && urlSeed.length > 0) {
+            tokenData.seed = urlSeed;
+        }
         const tokenId = tokenData.tokenId;
         const ONE_MIL = 1000000;
         const projectNumber = Math.floor(parseInt(tokenData.tokenId) / ONE_MIL)
@@ -68,10 +68,9 @@
         let mathRand = sfc32(...cyrb128(seed));
         // don't edit
     </script>
-    <script type="text/javascript" src="index.js"></script>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="container-el"></div>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
