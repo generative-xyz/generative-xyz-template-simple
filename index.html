@@ -79,7 +79,7 @@
         }
 
         // a PRNG function that generates deterministic PRN between 0 and 1
-        // use this func as replace for Math.rand
+        // use this func as replace for Math.random()
         // and traits should be derived from this func
         let mathRand = sfc32(...cyrb128(seed));
         // don't edit
