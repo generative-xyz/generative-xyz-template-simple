@@ -62,10 +62,6 @@
         if (urlSeed && urlSeed.length > 0) {
             tokenData.seed = urlSeed;
         }
-        const tokenId = tokenData.tokenId;
-        const ONE_MIL = 1000000;
-        const projectNumber = Math.floor(parseInt(tokenData.tokenId) / ONE_MIL)
-        const tokenMintNumber = parseInt(tokenData.tokenId) % ONE_MIL
         const seed = tokenData.seed
 
         function cyrb128($) {

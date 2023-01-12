@@ -21,6 +21,6 @@ console.log(window.$generativeTraits)
 
 // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Your code here ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
 const container = document.createElement("div")
-container.innerHTML = "<span>tokenId: " + tokenId + "</span><br>" + "<span>tokenMintNumber: " + tokenMintNumber + "</span><br>" + "<span>project: " + projectNumber + "</span><br>" + "<span>seed: " + seed + "</span><br>";
+container.innerHTML = "<span>seed: " + seed + "</span><br>";
 document.body.prepend(container)
 // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Your code here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
