@@ -2,26 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>A simple template on generative.xyz</title>
+    <title>A simple template for publishing a new gen art collection</title>
 
     <!--
-    *********************************************************************************************************
-    Libraries for your project, script is 100% on-chain, please **** UNCOMMENT **** which you want
-            [
-                "p5js@1.5.0"
-                "threejs@r124"
-                "tonejs@14.8.49"
-                "c2.min.js@1.0.0"
-                "chromajs@2.4.2"
-                "p5.grain.js@0.6.1"
-            ]
-
-        ''' PLEASE contact to team@generative.xyz for submitting more your libs '''
-
-        !!!!!!
-        In case you would use your lib, please add it by yourself, we should store it on-chain when creating project(NOTE: this will effect on gas fee)
-        !!!!!!
-    *********************************************************************************************************
+    Generative supports the most popular creative coding libraries. Simply uncomment the library you want to use below.
+    Are we missing an important library? Let us know @generative_xyz.
     -->
 
     <!-- p5js@1.5.0
@@ -47,27 +32,21 @@
     <!-- tonejs@14.8.49
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.49/Tone.js"></script>
     -->
-    <script type="text/javascript">
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // FOR ORDINAL EXPLORER https://ordinals.com/inscriptions can show your collection
-        // you should insert raw lib code here more then link to lib on cdn
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-    </script>
-    <script id="snippet-random-code" type="text/javascript">
-        // not editable
-        let seed=window.location.href.split('/').find(t=>t.includes('i0'));
 
-        if (seed == null) {
-            seed = new URLSearchParams(window.location.search).get("seed");
-        } else {
-            let pattern = "seed=";
-            for(let i = 0; i < seed.length - pattern.length; ++i) {
-                if (seed.substring(i, i + pattern.length) == pattern) {
-                    seed = seed.substring(i + pattern.length);
-                    break;
-                }
-            }
+    <script id="snippet-contract-code" type="text/javascript">
+        const tokenIdRand = (Math.floor(Math.random() * 1000000) + 1) * 1000000 + (Math.floor(Math.random() * 100) + 1);
+        let tokenData = {
+            "tokenId": tokenIdRand,
+            "seed": tokenIdRand.toString(),
+        };
+    </script>
+
+    <script id="snippet-random-code" type="text/javascript">
+        const urlSeed = new URLSearchParams(window.location.search).get('seed');
+        if (urlSeed && urlSeed.length > 0) {
+            tokenData.seed = urlSeed;
         }
+        const seed = tokenData.seed
 
         function cyrb128($) {
             let _ = 1779033703, u = 3144134277, i = 1013904242, l = 2773480762;
@@ -83,47 +62,16 @@
             }
         }
 
-        // a PRNG function that generates deterministic PRN between 0 and 1
-        // use this func as replace for Math.random()
-        // and traits should be derived from this func
+
+        // IMPORTANT: Instead of Math.random(), use this function mathRand() for random number generation.  
+        // This function generates a random number between 0 and 1 with on-chain seed.
+
         let mathRand = sfc32(...cyrb128(seed));
-        // don't edit
+
     </script>
-    <style>
-        body {
-            margin: 0px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<script type="text/javascript">
-    const rand = mathRand();
-
-    // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Your traits here ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-    function T1(rand) {
-        // calculate rarity by yourself
-        if (rand > 0.5) {
-            return true;
-        } else {
-            return false
-        }
-    }
-
-    // window.$generativeTraits contain list traits for token
-    // you need to populate a $generativeTraits object in the window object
-    window.$generativeTraits = {
-        "T1": T1(rand),
-    }
-    console.log(window.$generativeTraits)
-    // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Your traits here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
-
-
-    // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Your code here ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-    const container = document.createElement("div")
-    container.innerHTML = "<span>seed: " + seed + "</span><br>";
-    document.body.prepend(container)
-    // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Your code here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
-
-</script>
+<script type="text/javascript" src="index.js"></script>
 </body>
 </html>
