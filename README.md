@@ -1,4 +1,8 @@
-# generative-xyz-template-simple
+# Launch your art on Bitcoin
+
+## A simple template for launching your art on Bitcoin
+
+It has everything you need to launch a new generative art collection on Bitcoin.
 
 ## Supported JS Libs
 
@@ -13,5 +17,5 @@
 
 ## Launch your art on Bitcoin
 
-Upload your project here: https://generative.xyz/create/upload-project
+Upload your project at https://generative.xyz/create
 
