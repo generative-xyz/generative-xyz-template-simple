@@ -11,4 +11,7 @@
                 "p5.grain.js@0.6.1"
             ]
 
-## Zip index.html file after complete your working
+## Launch your art on Bitcoin
+
+Upload your project here: https://generative.xyz/create/upload-project
+
