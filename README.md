@@ -4,6 +4,10 @@
 
 It has everything you need to launch a new generative art collection on Bitcoin.
 
+## Docs
+
+Need help?  See https://docs.generative.xyz/
+
 ## Supported JS Libs
 
             [
@@ -18,4 +22,3 @@ It has everything you need to launch a new generative art collection on Bitcoin.
 ## Launch your art on Bitcoin
 
 Upload your project at https://generative.xyz/create
-
