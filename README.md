@@ -4,9 +4,9 @@
 
 It has everything you need to launch a new generative art collection on Bitcoin.
 
-## Docs
-
 Need help?  See https://docs.generative.xyz/
+
+Questions?  Join our community https://discord.gg/ZkECdDPs
 
 ## Supported JS Libs
 
