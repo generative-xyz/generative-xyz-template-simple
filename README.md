@@ -4,7 +4,7 @@
 
 It has everything you need to launch a new generative art collection on Bitcoin.
 
-Need help?  See https://docs.generative.xyz/
+How to publish?  See https://docs.generative.xyz/
 
 Questions?  Join our community https://discord.gg/ZkECdDPs
 
