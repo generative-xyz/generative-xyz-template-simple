@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>A simple template for publishing a new gen art collection</title>
+    <title>A simple template for launching your art on Bitcoin</title>
 
     <!--
     Generative supports the most popular creative coding libraries. Simply uncomment the library you want to use below.
@@ -38,14 +38,19 @@
     -->
 
     <script type="text/javascript">
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-        // FOR ORDINAL EXPLORER https://ordinals.com/inscriptions can show your collection
-        // you should insert raw lib code here more than link to lib on cdn
-        // !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+        
+        // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Add your script here ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+        // 
+        // 
+        // 
+        // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Add your script here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+   
     </script>
 
     <script id="snippet-random-code" type="text/javascript">
-        // not editable
+        
+        // DO NOT EDIT THIS SECTION
+        
         let seed = window.location.href.split('/').find(t => t.includes('i0'));
 
         if (seed == null) {
@@ -92,7 +97,8 @@
 <script type="text/javascript">
     const rand = mathRand();
 
-    // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Your traits here ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+    // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Add traits here ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+    
     function T1(rand) {
         // calculate rarity by yourself
         if (rand > 0.5) {
@@ -108,14 +114,17 @@
         "T1": T1(rand),
     }
     console.log(window.$generativeTraits)
-    // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Your traits here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+    
+    // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Add traits here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 
-    // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Your code here ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+    // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Add your code here ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+    
     const container = document.createElement("div")
     container.innerHTML = "<span>seed: " + seed + "</span><br>";
     document.body.prepend(container)
-    // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Your code here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
+    
+    // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Add your code here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 </script>
 </body>
