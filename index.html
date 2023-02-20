@@ -37,20 +37,36 @@
     <script sandbox="allow-scripts" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/svg.js/3.1.2/svg.min.js"></script>
     -->
 
+    <!-- aframejs@1.2.0
+    <script sandbox="allow-scripts" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/aframe/1.2.0/aframe.min.js"></script>
+    -->
+
+    <!-- babylonjs@5.47.0
+    <script sandbox="allow-scripts" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/babylonjs/5.47.0/babylon.js"></script>
+    -->
+
+    <!-- paperjs@0.12.17
+    <script sandbox="allow-scripts" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/paper.js/0.12.17/paper-full.min.js"></script>
+    -->
+
+    <!-- regljs@2.1.0
+    <script sandbox="allow-scripts" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/regl/2.1.0/regl.min.js"></script>
+    -->
+
     <script type="text/javascript">
-        
+
         // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Add your script here ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
         // 
         // 
         // 
         // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Add your script here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
-   
+
     </script>
 
     <script id="snippet-random-code" type="text/javascript">
-        
+
         // DO NOT EDIT THIS SECTION
-        
+
         let seed = window.location.href.split('/').find(t => t.includes('i0'));
 
         if (seed == null) {
@@ -98,7 +114,7 @@
     const rand = mathRand();
 
     // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Add traits here ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-    
+
     function T1(rand) {
         // calculate rarity by yourself
         if (rand > 0.5) {
@@ -114,16 +130,16 @@
         "T1": T1(rand),
     }
     console.log(window.$generativeTraits)
-    
+
     // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Add traits here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 
     // ↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓ Add your code here ↓↓↓↓↓↓↓↓↓↓↓↓↓↓
-    
+
     const container = document.createElement("div")
     container.innerHTML = "<span>seed: " + seed + "</span><br>";
     document.body.prepend(container)
-    
+
     // ↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑ Add your code here ↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 </script>
